@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <body style="background-color:rgb(11, 255, 194);">
+    <meta charset="UTF-8">
+    <title>Membuat formulir pendaftaran</title>
+  </head>
+  <body>
+    <h2>Formulir pendaftaran anggota</h2>
+    <h3>Silahkan isi dengan benar</h3>
+    <form action="daftar_anggota.php" method="POST">
+      <table border="1" rules="all" cellpadding="5">
+        <tr>
+          <td>Nama pengguna:</td>
+          <td>
+            <input type="text" name="nama_pengguna">
+          </td>
+        </tr>
+        <tr>
+          <td>Nama lengkap:</td>
+          <td>
+            <input type="text" name="nama_lengkap">
+          </td>
+        </tr>
+        <tr>
+            <td>TTL:</td>
+            <td>
+              <input type="date" name="tanggal">
+            </td>
+          </tr>
+          <tr>
+            <td>
+                <form action="cek_jenis_kelamin.php" method="POST">
+                    Gender:
+            </td>
+            <td>
+                <input type="radio" name="jenis_kelamin" value="Laki-laki"> Laki-laki
+                <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan
+            </td>
+            
+          </tr>
+        <tr>
+          <td>Email:</td>
+          <td>
+            <input type="email" name="email">
+          </td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td>
+            <input type="password" name="kata_sandi">
+          </td>
+        <tr>
+          <td>Konfirmasi Password:</td>
+            <td>
+              <input type="password" name="konfirmasi_kata_sandi"
+            </td>
+          </td>
+        </tr>
+          <tr>
+            <td>Alamat:</td>
+            <td>
+             <textarea cols="50" rows="10" id="alamat" required></textarea>
+            </td>
+          </tr>
+        <tr>
+            <td>
+              <div class="dropdown">
+                <button class="dropbtn">Provinsi</button>
+                <div class="dropdown-content">
+              </div>
+            </td>
+            <td>
+            <select name="provinsi" id="provinsi">
+              <option value="Jawa Timur">Jawa Timur</option>
+              <option value="Jawa Tengah">Jawa Tengah</option>
+              <option value="Jawa Barat">Jawa Barat</option>
+            </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="dropdown">
+              <button class="dropbtn">Negara</button>
+              <div class="dropdown-content">
+            </div>
+          </td>
+            <td>
+            <select name="negara" id="negara">
+              <option value="Indonesia">Indonesia</option>
+              <option value="Amerika">Amerika</option>
+              <option value="Korea">Korea</option>
+            </tr>
+            <tr>
+              <td colspan="2">
+            <center><input type="checkbox" name="saya setuju dengan aturan privasi" value/> saya setuju dengan aturan privasi</center> </td>
+          </tr>
+        <tr>
+            <td colspan="2" align="right">
+            <input type="submit" name="submit" value="Daftar">
+            <input type="submit" name="submit" value="Batal">
+           </td>
+           </tr> 
+    </form>
+  </body>
+</html>
